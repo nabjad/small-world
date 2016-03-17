@@ -19,15 +19,17 @@
   </head>
   <body>
     <h1 id="fb-welcome">Welcome to my app</h1>
-    <script>
+
+<script>
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '1548560515458572',
       xfbml      : true,
       version    : 'v2.5'
     });
-  // Place following code after FB.init call.
 
+
+// Place following code after FB.init call.
 
 function onLogin(response) {
   if (response.status == 'connected') {
@@ -50,16 +52,6 @@ FB.getLoginStatus(function(response) {
     }, {scope: 'user_friends, email'});
   }
 });
-
-FB.ui({
-  method: 'share',
-  href: 'https://developers.facebook.com/docs/',
-}, function(response){});
- 
- FB.login(function(){
-  // Note: The call will only work if you accept the permission request
-  FB.api('/me/feed', 'post', {message: 'Hello, world!')});
-}, {scope: 'publish_actions'});
     // ADD ADDITIONAL FACEBOOK CODE HERE
   };
 
@@ -71,6 +63,10 @@ FB.ui({
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
+
+
+
+
     
       <div id="header">
         <nav>
