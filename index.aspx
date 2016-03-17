@@ -1,5 +1,5 @@
-<!doctype aspx>
-<html>
+
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -115,4 +115,4 @@ FB.getLoginStatus(function(response) {
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
   </body>
-</html>
+
