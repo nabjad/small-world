@@ -27,10 +27,7 @@
       version    : 'v2.5'
     });
   // Place following code after FB.init call.
-FB.ui({
-  method: 'share',
-  href: 'https://developers.facebook.com/docs/',
-}, function(response){});
+
 
 function onLogin(response) {
   if (response.status == 'connected') {
@@ -54,7 +51,10 @@ FB.getLoginStatus(function(response) {
   }
 });
 
-
+FB.ui({
+  method: 'share',
+  href: 'https://developers.facebook.com/docs/',
+}, function(response){});
     // ADD ADDITIONAL FACEBOOK CODE HERE
   };
 
@@ -86,9 +86,13 @@ FB.getLoginStatus(function(response) {
           <span class="credits left">Project maintained by <a href="https://github.com/nabjad">nabjad</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
+        
+        
 <p><fb:login-button autologoutlink="true"></fb:login-button></p>
     <p><fb:like></fb:like></p>
-    <p><fb:share></fb:share></p>
+
+    
+    
         <h3>
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
