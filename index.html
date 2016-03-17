@@ -54,7 +54,13 @@ FB.getLoginStatus(function(response) {
     }, {scope: 'user_friends, email'});
   }
 });
-    // ADD ADDITIONAL FACEBOOK CODE HERE
+  FB.ui({
+  method: 'share_open_graph',
+  action_type: 'og.likes',
+  action_properties: JSON.stringify({
+	  object:'http://img0.joyreactor.com/pics/post/auto-google-cookies-okay-guy-348570.jpeg',
+  })
+}, function(response){});  // ADD ADDITIONAL FACEBOOK CODE HERE
   };
 
   (function(d, s, id){
