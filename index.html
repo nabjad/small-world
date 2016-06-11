@@ -25,15 +25,13 @@
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '1548560515458572',
+      appId      : '527601697365093',
       xfbml      : true,
-      version    : 'v2.5'
+      version    : 'v2.6'
     });
 
-
-// Place following code after FB.init call.
-
-function onLogin(response) {
+    // ADD ADDITIONAL FACEBOOK CODE HERE
+    function onLogin(response) {
   if (response.status == 'connected') {
     FB.api('/me?fields=first_name', function(data) {
       var welcomeBlock = document.getElementById('fb-welcome');
@@ -54,13 +52,6 @@ FB.getLoginStatus(function(response) {
     }, {scope: 'user_friends, email'});
   }
 });
-  FB.ui({
-  method: 'share_open_graph',
-  action_type: 'og.likes',
-  action_properties: JSON.stringify({
-	  object:'http://nabjad.github.io/small-world',
-  })
-}, function(response){});  // ADD ADDITIONAL FACEBOOK CODE HERE
   };
 
   (function(d, s, id){
@@ -71,7 +62,6 @@ FB.getLoginStatus(function(response) {
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-error_page 405 = $uri;
 
 
 
